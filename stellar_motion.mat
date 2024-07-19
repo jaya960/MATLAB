@@ -9,7 +9,7 @@ plot(lambda, s, "-")
 xlabel("Wavelength")
 ylabel("Intensity")
 [sHa,idx] = min(s)
-lambda = lambda(idx)
+lambdaHa = lambda(idx)
 hold on
 plot(lambdaHa, sHa, "rs", MarkerSize=8)
 z = (lambdaHa/ 656.28) - 1
