@@ -1,4 +1,4 @@
-# Stellar Motion
+# Project 1 - Stellar Motion
 The star spectrum data in the spectra matrix was collected at evenly spaced wavelengths (λ), and you are given the starting wavelength (λstart), the spacing (λdelta), and the number of observations.
 ## Step 1
 Create a variable named lambdaEnd (λend) that contains the value of the last wavelength in the recorded spectrum. You can calculate lambdaEnd with the expression λstart+(nObs−1)λdelta.
@@ -41,6 +41,73 @@ s -> speed of HD94028 (km/s) <br>
 ## Conclusion
 
 HD94028 star is moving away from the earth at a speed of 155.3139 km/s
+
+
+# Project 2 - Compare Stellar Spectra
+In the previous project, I calculated the speed (in km/s) of a star relative to Earth by using its spectrum. In this project, I will calculate all the stars' speeds at once. Then I'll create a plot of the star spectra.
+
+# Step 1
+Extract the spectrum data for the each star in the matrix spectra. Then calculate the speed based on that data. How would you calculate the speed of all the stars in spectra?
+You could repeat the calculations in a for loop, but it is more efficient to use array operations instead.
+
+# Step 2
+Notice that speed is now a vector. A positive speed means that the star is moving away from Earth (redshifted spectrum), and a negative speed means that the star is moving toward Earth (blueshifted spectrum).
+In the next few steps, you'll plot the spectra of all seven stars using different line properties for redshifted and blueshifted spectra. It is convenient to use a for loop to access each star's data one at a time.
+Create a for loop with a loop index named v. The loop index should progress through all columns of spectra (1 to 7).
+In the loop body, extract the vth column of spectra to a variable named s.
+
+# Step 3
+You can use an if statement to differentiate between redshifted and blueshifted spectra.
+First, you'll plot the blueshifted spectra using dashed lines.
+Add an if statement to the for loop body. If speed(v) is less than or equal to 0, create a plot of s against lambda using a dashed line (--).
+Add the command hold on between the two end keywords so that you only create one plot.
+
+# Step 4
+Now you'll plot the redshifted spectra using thick lines.
+Add an else statement. If speed(v) is greater than 0, create a plot of s against lambda using a line width of 3.
+After the for loop, enter hold off.
+
+# Step 5
+You can pass text directly to the legend function.
+The string array starnames contains the name of each star in spectra.
+Add a legend to the plot using the array starnames.
+
+# Step 6
+In the plot, you identify stars with redshifted spectra by using their line styles, and then look up their names in the legend. Can you determine the names of the redshifted spectra without a for loop?
+Recall that you can use logical indexing to find elements that match a condition.
+c = b(a < 6)
+Create a variable movaway that contains the elements in starnames corresponding to where speed is greater than 0.
+
+# Step 7
+Like many functions in MATLAB, plotting functions can accept matrix inputs. plot(A) creates a line for each column in A.
+If you do not want to differentiate between redshifted and blueshifted spectra, you do not need to use a for loop.
+You can simply use: <br>
+
+      plot(lambda,spectra) <br>
+      
+      legend(starnames)
+
+# First Observation
+![image](https://github.com/user-attachments/assets/b5eca75a-ab27-4e01-8aab-853851512f11)
+
+where, Speed is a vector
+
+# Second Observation
+![image](https://github.com/user-attachments/assets/6601b299-f5b9-4971-9d10-2ee62789d2f4)
+
+Spectra of all the 7 stars in starData
+
+# Third Observation
+![image](https://github.com/user-attachments/assets/8db1a08e-1721-47fb-a9f0-132a51e33286)
+
+Names of the Red-Shifted Spectra (Obtained from Step 6)
+
+# Fourth Observation
+![image](https://github.com/user-attachments/assets/fd3328ff-7151-4381-9a83-3096bb7ff1d4)
+
+Spectra obtained from the last step
+
+
 
 
 
