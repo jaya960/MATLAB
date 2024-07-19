@@ -1,4 +1,4 @@
-load starData
+load starData                  % starData contains: (i) spectra matrix of 357*7 which means 357 intensity observations of each star and total stars observed are 7 , (ii) lambda matrix, (iii) starnames string array which contains the names of all the stars
 [sHa,idx] = min(spectra);      % Calculate the speed of all the stars 
 lambdaHa = lambda(idx);
 z = lambdaHa/656.28 - 1;
