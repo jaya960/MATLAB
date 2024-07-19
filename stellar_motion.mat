@@ -1,5 +1,5 @@
-load starData
-nObs = size(spectra,1)
+load starData                       % starData contains spectra matrix of 357*7 which means 357 observations of each star and total stars observed are 7 
+nObs = size(spectra,1)              % size(spectra,1) gives the size of the 1st dimension of the spectra ,i.e., number of rows (=357)
 lambdaStart = 630.02
 lambdaDelta = 0.14
 lambdaEnd = lambdaStart + (nObs-1)*lambdaDelta
@@ -13,7 +13,7 @@ lambda = lambda(idx)
 hold on
 plot(lambdaHa, sHa, "rs", MarkerSize=8)
 z = (lambdaHa/ 656.28) - 1
-speed = z * 299792.458                                    % speed is in km/sec
+speed = z * 299792.458                                    % speed is in km/sec ; 299792.458 km/sec is the speed of light
 
 % sign of speed determines direction of movement of star. 
 % If it's positive then the star is moving away from the earth 
