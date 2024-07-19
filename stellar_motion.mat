@@ -1,4 +1,4 @@
-load starData                       % starData contains spectra matrix of 357*7 which means 357 observations of each star and total stars observed are 7 
+load starData                       % starData contains spectra matrix of 357*7 which means 357 intensity observations of each star and total stars observed are 7 
 nObs = size(spectra,1)              % size(spectra,1) gives the size of the 1st dimension of the spectra ,i.e., number of rows (=357)
 lambdaStart = 630.02
 lambdaDelta = 0.14
