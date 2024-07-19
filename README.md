@@ -18,3 +18,30 @@ The point (lambdaHa,sHa) is the location of the hydrogen-alpha line. Add a point
 If you zoom in on the plot, you can see that the wavelength of the hydrogen-alpha line of HD 94028 is 656.62 nm, which is slightly longer than the laboratory value of 656.28 nm. Using the hydrogen-alpha wavelength of the star, you can calculate the redshift factor (the speed of the star relative to Earth) using the formula z=(λHa/656.28)−1.  You can then calculate the speed by multiplying the redshift factor (z) by the speed of light (299792.458km/s). 
 Calculate the redshift factor (z) and the speed (in km/s) at which the star is moving away from Earth. Assign the redshift factor to a variable named z and the speed to a variable named speed.
 
+## First Observation
+![image](https://github.com/user-attachments/assets/8330b77f-209d-460d-809f-7f568df56668)
+
+where, <br>
+sHa -> Minimum Intensity of HD94028 or Intensity at Hydrogen-Alpha line <br>
+idx -> Index of the minimum intensity in the spectrum of HD94028 <br>
+lambdaHa -> Wavelength of HD94028 at Hydrogen-Alpha line <br>
+
+## Second Observation
+![image](https://github.com/user-attachments/assets/ff9e83c4-ff42-491a-8469-c007a7d9fe58)
+
+Spectrum of HD94028
+
+## Third Observation
+![image](https://github.com/user-attachments/assets/45c5485c-5480-46d2-8881-439117f2fb70)
+
+where, <br>
+z -> red-shift factor of HD94028 star <br>
+s -> speed of HD94028 (km/s) <br>
+
+## Conclusion
+
+HD94028 star is moving away from the earth at a speed of 155.3139 km/s
+
+
+
+
